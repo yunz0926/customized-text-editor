@@ -1,7 +1,9 @@
 import React, { ReactNode } from "react";
-import { CustomElement } from "./custom-types";
+import { CustomElement } from "../../types/custom-types";
+import LinkComponent from "./LinkComponent";
 import CodeBlockComponent from "./CodeBlockComponent";
 import CodeComponent from "./CodeComponent";
+import MentionComponent from "./MentionComponent";
 
 export interface ElementProps {
   children: ReactNode;
@@ -12,6 +14,8 @@ export interface ElementProps {
 const Element = (props: ElementProps) => {
   const { attributes, children, element } = props;
   switch (element.type) {
+    case "link":
+      return <LinkComponent {...props} />;
     case "code":
       return <CodeComponent {...props} />;
     case "code-block":
@@ -34,6 +38,8 @@ const Element = (props: ElementProps) => {
       return <li {...attributes}>{children}</li>;
     case "numbered-list":
       return <ol {...attributes}>{children}</ol>;
+    case "mention":
+      return <MentionComponent {...props} />;
     default:
       return <p {...attributes}>{children}</p>;
   }

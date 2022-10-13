@@ -10,46 +10,8 @@ import {
 import { ReactEditor } from "slate-react";
 import { HistoryEditor } from "slate-history";
 
-// export type BlockQuoteElement = {
-//   type: "block-quote";
-//   align?: string;
-//   children: Descendant[];
-// };
-
-// export type BulletedListElement = {
-//   type: "bulleted-list";
-//   align?: string;
-//   children: Descendant[];
-// };
-
-// export type CheckListItemElement = {
-//   type: "check-list-item";
-//   checked: boolean;
-//   children: Descendant[];
-// };
-
-// export type EditableVoidElement = {
-//   type: "editable-void";
-//   children: EmptyText[];
-// };
-
-// export type HeadingElement = {
-//   type: "heading";
-//   align?: string;
-//   children: Descendant[];
-// };
-
-// export type HeadingTwoElement = {
-//   type: "heading-two";
-//   align?: string;
-//   children: Descendant[];
-// };
-
-// export type ImageElement = {
-//   type: "image";
-//   url: string;
-//   children: EmptyText[];
-// };
+export const LIST_TYPES = ["numbered-list", "bulleted-list"];
+export const TEXT_ALIGN_TYPES = ["left", "center", "right", "justify"];
 
 export type LinkElement = {
   type: "link";
@@ -57,15 +19,6 @@ export type LinkElement = {
   children: Descendant[];
   icon?: string;
 };
-
-// export type TimeStampElement = {
-//   type: "timestamp";
-//   children: Descendant[];
-// };
-
-// export type ButtonElement = { type: "button"; children: Descendant[] };
-
-// export type ListItemElement = { type: "list-item"; children: Descendant[] };
 
 export type MentionElement = {
   type: "mention";

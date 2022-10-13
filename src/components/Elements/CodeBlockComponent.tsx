@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { ElementProps } from "./Element";
+import { ElementProps } from ".";
 
 const CodeBlockComponent = ({ attributes, children }: ElementProps) => {
   return <CodeBlockNode {...attributes}>{children}</CodeBlockNode>;
